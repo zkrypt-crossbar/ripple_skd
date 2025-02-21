@@ -1,11 +1,13 @@
 package crypto
 
 import (
+	"crypto/ecdsa"
 	"crypto/rand"
 	"encoding/binary"
 	"math/big"
 
 	"github.com/btcsuite/btcd/btcec/v2"
+	cryptoLib "github.com/ethereum/go-ethereum/crypto"
 )
 
 var (
@@ -72,4 +74,32 @@ func (k *ecdsaKey) Public(sequence *uint32) []byte {
 		return k.PubKey().SerializeCompressed()
 	}
 	return k.generateKey(*sequence).PubKey().SerializeCompressed()
+}
+
+func LoadECDSKey(privateKeyBytes []byte) *ecdsaKey {
+	pri, _ := btcec.PrivKeyFromBytes(privateKeyBytes)
+	k := &ecdsaKey{pri}
+	return k
+}
+
+func GenECDSAKey() (*ecdsaKey, error) {
+	key, err := cryptoLib.GenerateKey()
+	if err != nil {
+		return nil, err
+	}
+
+	k, err := ecdsaToBtcec(key)
+	if err != nil {
+		return nil, err
+	}
+	return &ecdsaKey{k}, nil
+
+}
+
+func ecdsaToBtcec(ecdsaPrivKey *ecdsa.PrivateKey) (*btcec.PrivateKey, error) {
+	privBytes := ecdsaPrivKey.D.Bytes()
+
+	privKey, _ := btcec.PrivKeyFromBytes(privBytes)
+
+	return privKey, nil
 }
