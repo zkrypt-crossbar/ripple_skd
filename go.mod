@@ -31,4 +31,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/rubblelabs/ripple => github.com/zkrypt-crossbar/ripple_skd v1.0.2
+replace github.com/rubblelabs/ripple => github.com/zkrypt-crossbar/ripple_skd v1.0.3
