@@ -1,4 +1,4 @@
-module github.com/rubblelabs/ripple
+module github.com/zkrypt-crossbar/ripple_skd
 
 go 1.19
 
@@ -9,6 +9,7 @@ require (
 	github.com/golang/glog v1.0.0
 	github.com/gorilla/websocket v1.4.2
 	github.com/juju/testing v0.0.0-20210324180055-18c50b0c2098
+	github.com/rubblelabs/ripple v0.0.0-00010101000000-000000000000
 	golang.org/x/crypto v0.0.0-20211117183948-ae814b36b871
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 )
