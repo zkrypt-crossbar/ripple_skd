@@ -30,7 +30,7 @@ func Verify(publicKey, hash, msg, signature []byte) (bool, error) {
 	}
 }
 
-func signEd25519(privateKey, msg []byte) ([]byte, error) {
+func SignEd25519(privateKey, msg []byte) ([]byte, error) {
 	return ed25519.Sign(privateKey, msg)[:], nil
 }
 
@@ -48,7 +48,7 @@ func verifyEd25519(pubKey, signature, msg []byte) (bool, error) {
 }
 
 // Returns DER encoded signature from input hash
-func signECDSA(privateKey, hash []byte) ([]byte, error) {
+func SignECDSA(privateKey, hash []byte) ([]byte, error) {
 	priv, _ := btcec.PrivKeyFromBytes(privateKey)
 	sig := ecdsa.Sign(priv, hash)
 	return sig.Serialize(), nil
