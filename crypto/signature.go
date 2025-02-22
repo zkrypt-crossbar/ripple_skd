@@ -11,9 +11,9 @@ import (
 func Sign(privateKey, hash, msg []byte) ([]byte, error) {
 	switch len(privateKey) {
 	case ed25519.PrivateKeySize:
-		return signEd25519(privateKey, msg)
+		return SignEd25519(privateKey, msg)
 	case btcec.PrivKeyBytesLen:
-		return signECDSA(privateKey, hash)
+		return SignECDSA(privateKey, hash)
 	default:
 		return nil, fmt.Errorf("Unknown private key format")
 	}
