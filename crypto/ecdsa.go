@@ -76,7 +76,7 @@ func (k *ecdsaKey) Public(sequence *uint32) []byte {
 	return k.generateKey(*sequence).PubKey().SerializeCompressed()
 }
 
-func LoadECDSKey(privateKeyBytes []byte) *ecdsaKey {
+func LoadECDSAKey(privateKeyBytes []byte) *ecdsaKey {
 	pri, _ := btcec.PrivKeyFromBytes(privateKeyBytes)
 	k := &ecdsaKey{pri}
 	return k

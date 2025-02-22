@@ -72,8 +72,8 @@ github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e/go.mod h1:pJLUxLENpZxwdsK
 github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/fJaraNFVN+nFs=
 github.com/rogpeppe/go-internal v1.12.0 h1:exVL4IDcn6na9z1rAb56Vxr+CgyK3nn3O+epU5NdKM8=
 github.com/rogpeppe/go-internal v1.12.0/go.mod h1:E+RYuTGaKKdloAfM02xzb0FW3Paa99yedzYV+kq4uf4=
-github.com/zkrypt-crossbar/ripple_skd v1.0.2 h1:VwUH7uQ89BcqsiAliIWnwPCv+UyzDmWO45sSecHtvEc=
-github.com/zkrypt-crossbar/ripple_skd v1.0.2/go.mod h1:NOelIN/pfjqpxbFhX/F36LemuoxEt/BcMsbiPVzwHK0=
+github.com/zkrypt-crossbar/ripple_skd v1.0.3 h1:0CkdL6j9fTsaV6vSGh7grpoI0DFC7nDe4KJnlshG0o4=
+github.com/zkrypt-crossbar/ripple_skd v1.0.3/go.mod h1:zJkdZwvre0hNfG/7m/oGQxPIzFSXsa6HEp9EhiC5ajI=
 golang.org/x/crypto v0.0.0-20180214000028-650f4a345ab4/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

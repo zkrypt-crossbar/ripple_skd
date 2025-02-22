@@ -6,6 +6,15 @@ import (
 	"github.com/rubblelabs/ripple/crypto"
 )
 
+func GetMessageHash(s Signable) (Hash256, []byte, error) {
+	s.InitialiseForSigning()
+	hash, msg, err := SigningHash(s)
+	if err != nil {
+		return Hash256{}, nil, err
+	}
+	return hash, append(s.SigningPrefix().Bytes(), msg...), nil
+}
+
 func Sign(s Signable, key crypto.Key, sequence *uint32) error {
 	s.InitialiseForSigning()
 	copy(s.GetPublicKey().Bytes(), key.Public(sequence))
